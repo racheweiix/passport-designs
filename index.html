@@ -393,7 +393,7 @@ function measure() {
   const w = innerWidth, h = innerHeight;
   /* inside the NookPass app on a phone, keep the bar clear of NookPass's floating QR button */
   const inApp = /nookpass\.com/.test(document.referrer) || [...(location.ancestorOrigins || [])].some(o => /nookpass\.com/.test(o));
-  const pb = inApp && w < 700 ? 64 : 14; root.style.setProperty('--pick-b', pb + 'px');
+  const pb = inApp && w < 700 ? 90 : 14; root.style.setProperty('--pick-b', pb + 'px');
   const pick = picker.offsetHeight + pb + 10;
   const Hw = Math.min(h - 64 - pick - 40, 680, (w - 170) / 1.4);
   const short = h < 720, barN = short ? 50 : 64, capN = short ? 0 : 150;
